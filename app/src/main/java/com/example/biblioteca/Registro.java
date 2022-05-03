@@ -48,7 +48,7 @@ public class Registro extends AppCompatActivity {
         btnguardarRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try{
+
                     checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
                     if(permiso = true){
                         Usuario userRequest = new Usuario();
@@ -66,16 +66,17 @@ public class Registro extends AppCompatActivity {
                             Toast.makeText(Registro.this, "SE HA REGISTRADO CON EXITO", Toast.LENGTH_LONG).show();
                             }
                             }
-                        } else{
+                        }
+                        else{
                             Toast.makeText(Registro.this, "Error al crear el usuario", Toast.LENGTH_SHORT).show();
                         }
 
                     }
                     }
-                } catch(Exception ex){
-                    ex.printStackTrace();
-                }
-            }
+    }
+
+
+
         });
 
 
