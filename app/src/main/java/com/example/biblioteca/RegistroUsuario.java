@@ -1,6 +1,7 @@
 package com.example.biblioteca;
 
 import java.sql.Statement;
+import java.util.List;
 
 public class RegistroUsuario {
 
@@ -29,12 +30,6 @@ public class RegistroUsuario {
         }
         return respuesta;
     }
-
-
-
-
-
-
 
 
 }
