@@ -13,7 +13,7 @@ public class CatalagoDeLibros extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalago_de_libros);
 
-        this.tlLibros = findViewById(R.id.tlLibros);
+        //this.tlLibros = findViewById(R.id.tlLibros);
 
     }
 

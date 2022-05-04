@@ -1,9 +1,11 @@
 package com.example.biblioteca;
 
+import android.os.AsyncTask;
+
 import java.sql.Statement;
 import java.util.List;
 
-public class RegistroUsuario {
+public class RegistroUsuario extends AsyncTask<Usuario, Void, String> {
 
 
     /**

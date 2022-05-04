@@ -19,10 +19,11 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Login);
+        setContentView(R.layout.login);
         this.txtusuario = findViewById(R.id.txtusuario);
-        this.txtpassword = findViewById(R.id.txtpassword);
+        this.txtpassword = findViewById(R.id.txtpasswordd);
         this.boton = findViewById(R.id.btnregistrarse);
+        this.btningresar = findViewById(R.id.btningresar2);
 
         btningresar.setOnClickListener(new View.OnClickListener() {
             @Override
