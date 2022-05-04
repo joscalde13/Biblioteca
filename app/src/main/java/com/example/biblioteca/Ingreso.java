@@ -1,9 +1,11 @@
 package com.example.biblioteca;
 
+import android.os.AsyncTask;
+
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Ingreso {
+public class Ingreso extends AsyncTask<Usuario, Void, Usuario> {
 
     /**
      * Metodo que realiza la validacion del usuario en la base de datos
