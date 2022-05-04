@@ -48,13 +48,13 @@ public class Usuario {
         this.idEstado = idEstado;
     }
 
-    public String getFoto() {
+    /*/public String getFoto() {
         return foto;
     }
 
     public void setFoto(String foto) {
         this.foto = foto;
-    }
+    }*/
 
     public String getNombre() {
         return nombre;
