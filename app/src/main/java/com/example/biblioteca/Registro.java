@@ -22,7 +22,7 @@ public class Registro extends AppCompatActivity {
     EditText txtPassword;
     EditText txtNombre;
     EditText txtApellido;
-    EditText txtDpi;
+    EditText txtDPI;
     EditText txtCorreo;
     Button btnguardarRegistro;
     private static final int STORAGE_PERMISSION_CODE = 101;
@@ -41,7 +41,7 @@ public class Registro extends AppCompatActivity {
         this.txtPassword = findViewById(R.id.txtPassword);
         this.txtNombre = findViewById(R.id.txtNombre);
         this.txtApellido = findViewById(R.id.txtApellido);
-        this.txtDpi = findViewById(R.id.txtDpi);
+        this.txtDPI = findViewById(R.id.txtDPI);
         this.txtCorreo = findViewById(R.id.txtCorreo);
         this.btnguardarRegistro = findViewById(R.id.btnguardarRegistro);
 
@@ -62,7 +62,7 @@ public class Registro extends AppCompatActivity {
                             userRequest.setPassword(txtPassword.getText().toString());
                             userRequest.setNombre(txtNombre.getText().toString());
                             userRequest.setApellido(txtApellido.getText().toString());
-                            userRequest.setDpi(txtDpi.getText().toString());
+                            userRequest.setDpi(txtDPI.getText().toString());
                             userRequest.setCorreo(txtCorreo.getText().toString());
                             userRequest.setIdEstado(1);
                             String resultado = new RegistroUsuario().execute(userRequest).get();
