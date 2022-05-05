@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
-    private EditText txtusuario;
+    private EditText txtUsuario;
     private EditText txtpassword;
     private Button btningresar;
     private Button boton;
@@ -20,8 +20,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        this.txtusuario = findViewById(R.id.txtusuario);
-        this.txtpassword = findViewById(R.id.txtpasswordd);
+        this.txtUsuario = findViewById(R.id.txtUsuario);
+        this.txtpassword = findViewById(R.id.txtpassword);
         this.boton = findViewById(R.id.btnregistrarse);
         this.btningresar = findViewById(R.id.btningresar2);
 
@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 try{
                     Usuario userRequest = new Usuario();
-                    userRequest.setNickname(txtusuario.getText().toString());
+                    userRequest.setNickname(txtUsuario.getText().toString());
                     userRequest.setPassword(txtpassword.getText().toString());
                     Usuario userResponse = new Ingreso().execute(userRequest).get();
                     if(userResponse != null){
