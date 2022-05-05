@@ -67,15 +67,16 @@ public class Registro extends AppCompatActivity {
                             userRequest.setIdEstado(1);
                             String resultado = new RegistroUsuario().execute(userRequest).get();
                             if(resultado.equals("exito")){
+                                Toast.makeText(Registro.this, "SE HA REGISTRADO CON EXITO", Toast.LENGTH_LONG).show();
                                 Intent navegacion = new Intent(Registro.this, Login.class);
                                 startActivity(navegacion);
-                                Toast.makeText(Registro.this, "SE HA REGISTRADO CON EXITO", Toast.LENGTH_LONG).show();
+                            }else{
+                                Toast.makeText(Registro.this, "Error al crear el usuario", Toast.LENGTH_LONG).show();
                             }
                         }catch (Exception ex){
                             ex.printStackTrace();
                         }
-
-                        } else{
+                        }else{
                             Toast.makeText(Registro.this, "Error al crear el usuario", Toast.LENGTH_SHORT).show();
                         }
                     }
