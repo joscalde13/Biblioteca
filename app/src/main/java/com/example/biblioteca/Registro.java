@@ -37,11 +37,11 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
 
 
-        this.txtNickname = findViewById(R.id.txtNickname);
+        this.txtNickname = findViewById(R.id.txtNombre);
         this.txtPassword = findViewById(R.id.txtPassword);
         this.txtNombre = findViewById(R.id.txtNombre);
         this.txtApellido = findViewById(R.id.txtApellido);
-        this.txtDpi = findViewById(R.id.txtDpi);
+        this.txtDpi = findViewById(R.id.txtDPI);
         this.txtCorreo = findViewById(R.id.txtCorreo);
         this.btnguardarRegistro = findViewById(R.id.btnguardarRegistro);
 
