@@ -18,6 +18,7 @@ public class Ingreso extends AsyncTask<Usuario, Void, Usuario> {
             Conexion.conexion = Conexion.conectar();
             String sql = "select nickname, password, estado from moviles.usuario where nickname = '"+datos[0].getNickname()+"' and password = '"+datos[0].getPassword()+"'";
             Statement st = Conexion.conexion.createStatement();
+
             ResultSet rs = st.executeQuery(sql);
             if(rs.next()){
                 rs.beforeFirst();
