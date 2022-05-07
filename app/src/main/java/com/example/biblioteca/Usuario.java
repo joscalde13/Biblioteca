@@ -9,9 +9,8 @@ public class Usuario {
     private String apellido;
     private String dpi;
     private String correo;
-    private String genero;
     private int idEstado;
-    private String foto;
+
 
 
 

@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Ingreso extends AsyncTask<Usuario, Void, Usuario> {
+public class Ingreso extends AsyncTask {
 
     /**
      * Metodo que realiza la validacion del usuario en la base de datos
