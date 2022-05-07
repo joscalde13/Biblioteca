@@ -20,6 +20,7 @@ public class RegistroUsuario extends AsyncTask<Usuario, Void, String> {
             Conexion.conexion = Conexion.conectar();
             String sql = "insert into moviles.usuario(nickname, password, nombre, apellido, dpi, correo, estado) values('"+datos[0].getNickname()+"','"+datos[0].getPassword()+"','"+datos[0].getNombre()+"','"+datos[0].getApellido()+"','"+datos[0].getDpi()+"','"+datos[0].getCorreo()+"','"+datos[0].getIdEstado()+"')";
             Statement st = Conexion.conexion.createStatement();
+
             int rs = st.executeUpdate(sql);
             if(rs == 1){
                 respuesta = "exito";
