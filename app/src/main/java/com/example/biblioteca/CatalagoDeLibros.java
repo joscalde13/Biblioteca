@@ -22,6 +22,8 @@ public class CatalagoDeLibros extends AppCompatActivity {
      private Button btnNS;
      private static final String CHANNEL_ID= "Canal";
      private PendingIntent pendingIntent;
+     private Button btnlibro1;
+     private Button btnLibro2;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -30,10 +32,34 @@ public class CatalagoDeLibros extends AppCompatActivity {
         setContentView(R.layout.activity_catalago_de_libros);
         this.btnNotificaciones = findViewById(R.id.btnAgregar);
         btnNS = findViewById(R.id.btnSN);
-        //this.tlLibros = findViewById(R.id.tlLibros);
+        this.tlLibros = findViewById(R.id.tlLibros);
+
+        this.btnlibro1 = findViewById(R.id.btnLibro1);
+        this.btnLibro2 = findViewById(R.id.btnLibro2);
 
 
+        btnlibro1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent navegacion = new Intent(CatalagoDeLibros.this, libro1.class);
+                startActivity(navegacion);
+
+            }
+
+        });
+
+
+        btnLibro2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent navegacion = new Intent(CatalagoDeLibros.this, libro2.class);
+                startActivity(navegacion);
+
+            }
+
+        });
 
 
         btnNS.setOnClickListener(new View.OnClickListener() {

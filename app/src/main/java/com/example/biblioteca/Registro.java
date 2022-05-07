@@ -1,13 +1,9 @@
 package com.example.biblioteca;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -25,8 +21,7 @@ public class Registro extends AppCompatActivity {
     EditText txtDPI;
     EditText txtCorreo;
     Button btnguardarRegistro;
-    private static final int STORAGE_PERMISSION_CODE = 101;
-    boolean permiso = false;
+
 
 
 
@@ -47,12 +42,6 @@ public class Registro extends AppCompatActivity {
 
 
 
-        /**
-        * Boton de registro de usuario
-        */
-        btnguardarRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
                     checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
                     if(permiso = true){
@@ -81,32 +70,19 @@ public class Registro extends AppCompatActivity {
                         }
                     }
 
-        });
 
 
     }
 
-    /**
-     * Metodo que verifica si se cuenta con permiso para acceder al almacenamiento
-     * @param permission
-     * @param requestCode
-     */
-    public void checkPermission(String permission, int requestCode){
-        if (ContextCompat.checkSelfPermission(Registro.this, permission) == PackageManager.PERMISSION_DENIED) {
-            ActivityCompat.requestPermissions(Registro.this, new String[] { permission }, requestCode);
-        } else {
-            permiso = true;
-        }
-    }
 
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults){
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == STORAGE_PERMISSION_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                permiso = true;
-            } else {
-                permiso = false;
-            }
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
