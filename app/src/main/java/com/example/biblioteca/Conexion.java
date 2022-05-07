@@ -24,7 +24,7 @@ public class Conexion {
         Connection conn;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://192.168.1.38:3306/moviles", "root", "admon");
+            conn = DriverManager.getConnection("jdbc:mysql://192.168.1.6:3306/moviles", "root", "admon");
         } catch(Exception ex){
             ex.printStackTrace();
             return null;
